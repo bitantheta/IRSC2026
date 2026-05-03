@@ -17,14 +17,19 @@ if (menuBtn && mobileDrawer) {
   menuBtn.setAttribute("aria-expanded", "false");
 
   menuBtn.addEventListener("click", () => {
-    const isOpen = mobileDrawer.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    const wasOpen = mobileDrawer.classList.contains("open");
+    if (!wasOpen) {
+      mobileDrawer.classList.add("open");
+      menuBtn.setAttribute("aria-expanded", "true");
+      document.documentElement.style.overflow = 'hidden';
+    }
   });
 
   mobileLinks.forEach((link) => {
     link.addEventListener("click", () => {
       mobileDrawer.classList.remove("open");
       menuBtn.setAttribute("aria-expanded", "false");
+      document.documentElement.style.overflow = '';
     });
   });
 }
