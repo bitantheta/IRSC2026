@@ -1,0 +1,27 @@
+{
+  "name": "irsc-2026",
+  "version": "1.0.0",
+  "description": "IRSC 2026 - International Relations Scholastic Conclave Website",
+  "main": "script.js",
+  "scripts": {
+    "build": "esbuild analytics.js --bundle --format=esm --outfile=analytics.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitantheta/IRSC2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitantheta/IRSC2026/issues"
+  },
+  "homepage": "https://github.com/bitantheta/IRSC2026#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
