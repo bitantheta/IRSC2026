@@ -4,249 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IRSC 2026 | International Relations Scholastic Conclave</title>
-    <meta
-      name="description"
-      content="IRSC 2026 — International Relations Scholastic Conclave, Jadavpur University."
-    />
+    <meta name="description" content="IRSC 2026 - International Relations Scholastic Conclave, Jadavpur University." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="splash-screen" aria-label="Intro splash">
-      <div class="splash-text-wrap">
-        <h1 class="splash-word">POWER.</h1>
-        <h1 class="splash-word">POLICY.</h1>
-        <h1 class="splash-word">POSSIBILITY.</h1>
-      </div>
-    </div>
+    <header class="masthead" id="home">
+      <a class="masthead-mark" href="#home" aria-label="IRSC home">IRSC<span>2026</span></a>
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#about">About Us</a><a href="#editorial">Editorial</a><a href="#events">Events</a><a href="#explore">Explore More</a><a href="./articles.html">Articles</a><a href="#archive">Archive</a><a href="#contact">Contact Us</a>
+      </nav>
+    </header>
 
-    <div id="site-shell" class="site-hidden">
-      <header class="site-header" id="home">
-        <nav class="top-nav" aria-label="Primary navigation">
-          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-          </button>
-          <div class="top-nav-group top-nav-group-left">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#editorial">Editorial</a>
-            <a href="#workshops">Workshops</a>
-            <a href="#seminars">Seminars</a>
-          </div>
-          <a class="top-nav-logo" href="#home" aria-label="IRSC home">
-            <img src="./assets/images/hero-logo.png" alt="IRSC logo" />
-          </a>
-          <div class="top-nav-group top-nav-group-right">
-            <a href="#research">Research Project</a>
-            <a href="#events">Events</a>
-            <a href="#flagship">Flagship</a>
-            <a href="#archive">Archive</a>
-            <a href="#contact">Contact Us</a>
-          </div>
-        </nav>
-        <div id="mobile-drawer" class="mobile-drawer">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#editorial">Editorial</a>
-          <a href="#workshops">Workshops</a>
-          <a href="#seminars">Seminars</a>
-          <a href="#research">Research Project</a>
-          <a href="#events">Events</a>
-          <a href="#flagship">Flagship</a>
-          <a href="#archive">Archive</a>
-          <a href="#contact">Contact Us</a>
+    <main class="site-canvas">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-kicker">9th, 10th &amp; 11th Sept 2026</p>
+          <h1 id="hero-title">IRSC</h1>
+          <p class="hero-subtitle">International Relations Scholastic Conclave</p>
+          <a class="gold-button" href="#contact">Register here</a>
         </div>
-      </header>
-
-      <main>
-        <section class="hero">
-          <div class="hero-backdrop"></div>
-          <div class="hero-layer">
-            <div class="hero-brand">
-              <img class="hero-logo" src="./assets/images/hero-logo.png" alt="IRSC logo" />
-              <div class="hero-brand-copy">
-                <h2>IRSC</h2>
-                <p>INTERNATIONAL RELATIONS SCHOLASTIC CONCLAVE</p>
-                <a class="register-btn" href="#contact">REGISTER HERE</a>
-              </div>
-            </div>
-            <div
-              class="hero-countdown"
-              id="hero-countdown"
-              data-countdown-target="2026-06-29T00:00:00+05:30"
-              aria-label="Countdown to IRSC 2026"
-            >
-              <div class="countdown-item">
-                <span class="countdown-value" data-countdown-days>00</span>
-                <span class="countdown-label">Days</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-value" data-countdown-hours>00</span>
-                <span class="countdown-label">Hours</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-value" data-countdown-minutes>00</span>
-                <span class="countdown-label">Minutes</span>
-              </div>
-              <div class="countdown-item">
-                <span class="countdown-value" data-countdown-seconds>00</span>
-                <span class="countdown-label">Seconds</span>
-              </div>
-            </div>
-            <p class="hero-university">DEPARTMENT OF INTERNATIONAL RELATIONS • JADAVPUR UNIVERSITY</p>
+        <aside class="hero-countdown" aria-label="Countdown to IRSC 2026">
+          <p class="countdown-kicker">Conference begins in</p>
+          <div class="countdown-display" role="presentation">
+            <div class="countdown-cell"><strong id="countdown-days">00</strong><span>Days</span></div>
+            <div class="countdown-cell"><strong id="countdown-hours">00</strong><span>Hours</span></div>
+            <div class="countdown-cell"><strong id="countdown-minutes">00</strong><span>Minutes</span></div>
+            <div class="countdown-cell"><strong id="countdown-seconds">00</strong><span>Seconds</span></div>
           </div>
-        </section>
+          <p class="countdown-dates">9th, 10th &amp; 11th Sept 2026</p>
+        </aside>
+        <p class="hero-university">Department of International Relations <span>●</span> Jadavpur University</p>
+        <div class="hero-seal"><img src="./assets/images/hero-logo.png" alt="IRSC emblem" /></div>
+      </section>
 
-        <section id="about" class="theme-section">
-          <p class="eyebrow">IRSC 2026 THEME</p>
-          <h1>
-            STRATEGIC AUTONOMY AND GLOBAL RE-ALIGNMENT: EXPLORING INDIA'S PROSPECT IN A MULTIPOLAR
-            WORLD
-          </h1>
-        </section>
+      <section class="intro-section" id="about">
+        <h2 class="about-heading">About Our Conclave</h2>
+        <p class="about-description">The International Relations Scholastic Conclave, organised by the Department of International Relations at Jadavpur University, is a student-driven academic forum that brings together students, scholars, and professionals to engage with critical global issues. Since its inception in 2010, the conclave has been a pursuit of intellectual exploration, aiming to unravel the complexities of global politics. By convening a diverse group of experts and students, the event facilitates in-depth discussions and debates on key themes in International Relations.</p>
+      </section>
 
-        <section class="about-conclave-panel">
-          <div class="about-conclave-inner">
-            <h2>ABOUT OUR CONCLAVE</h2>
-            <p>
-              The International Relations Scholastic Conclave, organised by the Department of
-              International Relations at Jadavpur University, is a student-driven academic forum
-              that brings together students, scholars, and professionals to engage with critical
-              global issues. Since its inception in 2010, the conclave has been a pursuit of
-              intellectual exploration, aiming to unravel the complexities of global politics. By
-              convening a diverse group of experts and students, the event facilitates in-depth
-              discussions and debates on key themes in International Relations.
-            </p>
-          </div>
-        </section>
+      <section class="theme-card" aria-label="IRSC 2026 theme">
+        <div class="theme-copy">
+          <h2>Strategic Autonomy And<br />Global Re-alignment:<br />Exploring India’s Prospect In A<br />Multipolar World</h2>
+          <p>This theme has been chosen for its broad and interdisciplinary character. It seeks to create discussions surrounding global governance, the geopolitics of the Indo-Pacific and Eurasia, non-Western perspectives in International Relations, emerging technologies, climate governance, migration, hybrid threats, connectivity corridors, and the vision of Viksit Bharat 2047.</p>
+        </div>
+        <img src="./assets/images/strategic_autonomy.png" alt="Strategic autonomy discussion" />
+      </section>
 
-        <section id="coordinators" class="coordinators-section">
-          <div class="coordinator-story coordinator-story-first">
-            <div class="coordinator-photo left-photo" aria-label="Portrait of the first teacher coordinator"></div>
-            <article class="coordinator-message message-card coordinator-message-first">
-              <p class="message-name">Teacher Coordinator I</p>
-              <blockquote>
-                We are pleased to welcome every participant to this year’s conclave. May the
-                proceedings be marked by thoughtful engagement, scholarly discipline, and a
-                genuine spirit of intellectual exchange.
-              </blockquote>
-            </article>
-          </div>
+      <section class="convenors-section" id="coordinators">
+        <p class="section-kicker">Message From<br />Faculty Convenors</p>
+        <div class="convenor-grid">
+          <article class="convenor-card">
+            <img src="./assets/images/left.jpg" alt="Teacher Coordinator I" />
+            <div><p class="convenor-name">Subhajit Naskar | Asst. Professor, Department of International Relations, Jadavpur University, Kolkata</p><blockquote>“Indian Constitution in its articles 14 and 15 promises equality with legal binding and ensures opportunities without discrimination as normative principles and foundational commitments of the Indian Republic.”</blockquote><button class="read-more" type="button" data-convenor="one">Read More</button></div>
+          </article>
+          <article class="convenor-card convenor-card-reverse">
+            <img src="./assets/images/right.jpg" alt="Teacher Coordinator II" />
+            <div><p class="convenor-name">Shibashis Chatterjee | Professor, Department of International Relations, Jadavpur University, Kolkata</p><blockquote>“It is with profound honor that we welcome Jadavpur University, a distinguished Indian academic institution dedicated to cultivating policy engagement, fostering informed discourse, and advancing critical scholarship in International Relations and Strategic Studies.”</blockquote><button class="read-more" type="button" data-convenor="two">Read More</button></div>
+          </article>
+        </div>
+      </section>
 
-          <div class="coordinator-divider">
-            <h3>Message From The Coordinators</h3>
-          </div>
+      <dialog class="convenor-dialog" id="convenor-dialog" aria-labelledby="convenor-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close message">×</button>
+        <p class="dialog-kicker">Message From</p><h2 id="convenor-dialog-title">Faculty Convenor</h2>
+        <p id="convenor-dialog-content">Full message placeholder.</p>
+      </dialog>
 
-          <div class="coordinator-story coordinator-story-second">
-            <article class="coordinator-message message-card coordinator-message-second">
-              <p class="message-name">Teacher Coordinator II</p>
-              <blockquote>
-                We look forward to a conclave that encourages careful listening, respectful
-                debate, and a meaningful exchange of perspectives among all delegates and guests.
-              </blockquote>
-            </article>
-            <div class="coordinator-photo right-photo" aria-label="Portrait of the second teacher coordinator"></div>
-          </div>
-        </section>
+      <section class="editorial-section" id="editorial">
+        <p class="section-kicker">From Our</p><h2 class="display-title">Editorial Board</h2>
+        <p class="editorial-copy">At the International Relations Scholastic Conclave (IRSC), we believe that meaningful discourse begins with informed inquiry and critical thought. The Editorial Board is dedicated to fostering intellectual engagement by creating a platform where students, scholars, and enthusiasts can explore the complexities of international relations through research, analysis, and dialogue.<br />Our Newsletter presents curated insights into contemporary global affairs, editorial perspectives, and updates that connect current events with broader academic debates. The Articles section features original research, policy analyses, and opinion pieces that encourage deeper reflection on the evolving international order. Together, these sections embody IRSC's commitment to promoting academic excellence, informed debate, and a vibrant culture of scholarship.</p>
+        <div class="editorial-actions"><a class="paper-link" href="#newsletter">Newsletter <span>click here</span></a><a class="paper-link paper-link-offset" href="./articles.html"><span>click here</span>Articles</a></div>
+      </section>
 
-        <section id="editorial" class="showcase-section">
-          <div class="showcase-title-wrap">
-            <h3>From The Editorial Wing</h3>
-          </div>
-          <div class="showcase-banner editorial-banner">
-            <div class="glow-row three-col">
-              <a href="#editorial" title="Click for more">BLOGS</a>
-              <a href="#editorial" title="Click for more">NEWSLETTER</a>
-              <a href="#editorial" title="Click for more">ARTICLES</a>
-            </div>
-          </div>
-        </section>
+      <section class="events-section" id="events">
+        <p class="section-kicker">Our</p><h2 class="display-title">Events</h2>
+        <p>Explore our events through two distinct categories: Flagship Events, which define the core identity of IRSC, and Associate Events, which complement the conclave by offering diverse platforms for intellectual and creative engagement.</p>
+        <div class="event-actions"><a class="paper-link" href="#flagship">Flagship <span>click here</span></a><a class="paper-link paper-link-offset" href="#associate"><span>click here</span>Associate</a></div>
+      </section>
 
-        <section id="events" class="showcase-section">
-          <div class="showcase-title-wrap">
-            <h3>Our Events</h3>
-          </div>
-          <div class="showcase-banner events-banner">
-            <div class="glow-row two-col">
-              <a id="flagship" href="#events" title="Click for more">FLAGSHIP</a>
-              <a href="#events" title="Click for more">BROCHURE</a>
-            </div>
-          </div>
-        </section>
+      <section class="explore-section" id="explore">
+        <p class="section-kicker">Explore More</p>
+        <div class="explore-grid"><a href="#workshops"><strong>Schedule<br />Of Panels</strong><span>Click Here</span></a><a href="#events"><strong>Event<br />Brochure</strong><span>Click Here</span></a></div>
+      </section>
 
-        <section class="showcase-section">
-          <div class="showcase-title-wrap">
-            <h3>Explore More</h3>
-          </div>
-          <div class="showcase-banner explore-banner">
-            <div class="glow-row three-col">
-              <a id="research" href="#research" title="Click for more">RESEARCH</a>
-              <a id="seminars" href="#seminars" title="Click for more">SEMINARS</a>
-              <a id="workshops" href="#workshops" title="Click for more">WORKSHOP</a>
-            </div>
-          </div>
-        </section>
+      <section class="newsletter-section" id="newsletter">
+        <h2>Newsletter</h2>
+        <p>Over the years, IRSC has emerged as a vibrant academic platform that encourages dialogue across disciplinary and ideological boundaries. It has consistently fostered an environment where young scholars, researchers, and students can engage with pressing international issues while challenging established paradigms. This newsletter carries forward that legacy by creating an intellectual space that is both inclusive and critically engaged, where emerging perspectives are not only acknowledged but meaningfully centered.</p>
+        <a class="newsletter-preview" href="#contact"><span>click here</span><strong>June edition</strong></a>
+      </section>
 
-        <section id="archive" class="theme-section">
-          <p class="eyebrow">ARCHIVE</p>
-          <h1>PAST EDITIONS, GALLERIES AND RECAPS WILL LIVE HERE.</h1>
-        </section>
+      <section class="subscribe-section" id="subscribe"><div class="subscribe-art" aria-label="Newsletter artwork placeholder"></div><div class="subscribe-copy"><p class="section-kicker">Stay in the loop</p><h2>Subscribe<br />To Our Newsletter</h2><form><label class="sr-only" for="email">Email address</label><span class="mail-icon" aria-hidden="true">✉</span><input id="email" type="email" placeholder="Your Email" /><button type="submit" aria-label="Subscribe">→</button></form></div></section>
 
-        <section id="contact" class="contact-section">
-          <div class="contact-wrapper">
-            <div class="contact-info">
-              <h2>Get in touch</h2>
-              <div class="info-block">
-                <p class="info-label">Email:</p>
-                <p class="info-value">irsc2026@gmail.com</p>
-              </div>
-              <div class="info-block">
-                <p class="info-label">Phone:</p>
-                <p class="info-value">+91 9875304504</p>
-              </div>
-              <div class="info-block">
-                <p class="info-label">Address:</p>
-                <p class="info-value">188, Raja Subodh Chandra Mallick Rd<br>Jadavpur, Kolkata, West Bengal 700032<br>India</p>
-              </div>
-              <div class="socials-block">
-                <p class="info-label">Follow us</p>
-                <div class="social-icons">
-                  <a href="#" class="social-icon" aria-label="Instagram">f</a>
-                  <a href="#" class="social-icon" aria-label="Pinterest">p</a>
-                  <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-                  <a href="#" class="social-icon" aria-label="Twitter">x</a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-form">
-              <form>
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Your full name" />
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" placeholder="Your email address" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" placeholder="Write something...."></textarea>
-                </div>
-                <button type="submit" class="send-btn">Send Message</button>
-              </form>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+      <section class="call-section" id="call-for-papers"><h2>Call For Papers</h2><p>Whether you're passionate about analysing global events, sharing your opinions, writing research-based articles, book reviews, interviews, or creative pieces related to world affairs, this is your opportunity to contribute and be part of a growing community of young thinkers. We invite students from all disciplines to submit their original work and help make the IRSC Newsletter a space for meaningful dialogue and diverse perspectives.</p><a class="dark-button" href="mailto:irsc2026@gmail.com">Submit Here</a></section>
 
+      <section class="landing-articles" aria-labelledby="landing-articles-title">
+        <h2 id="landing-articles-title" class="articles-heading">Editor's Pick</h2>
+        <a class="feature-story media-placeholder feature-football" href="./article.html?slug=football-beyond-the-pitch"><span class="story-label">Featured</span><h3>Football Beyond The Pitch: A Language Of Resistance Against Exploitation And Oppression</h3></a>
+        <div class="landing-article-category"><h3>Indian Politics</h3><div class="article-row"><a class="story-card media-placeholder placeholder-protest" href="./article.html?slug=when-protest-becomes-the-last-language"><strong>When Protest Becomes The Last Language Of Democracy</strong><span>Read</span></a><a class="story-card media-placeholder placeholder-kashmir" href="./article.html?slug=institutional-capture-of-social-media"><strong>Institutional Capture Of Social Media Algorithms: The Kashmir Case And The Emergence Of A “National” Panopticon</strong><span>Read</span></a><a class="story-card media-placeholder placeholder-muslims" href="./article.html?slug=viksit-bharat-2047"><strong>Viksit Bharat 2047 And The Inclusion Of Indian Muslims In The Development Process</strong><span>Read</span></a></div></div>
+        <div class="landing-article-category"><h3>Geopolitics</h3><div class="article-row"><a class="story-card media-placeholder placeholder-teesta" href="./article.html?slug=trivia-of-teesta"><strong>The Trivia Of Teesta And The Trinational Of Bangladesh-India-And-China</strong><span>Read</span></a><a class="story-card media-placeholder placeholder-road" href="./article.html?slug=neighbourhood-first-mirage"><strong>The “Neighbourhood First Mirage”: Beijing's Encirclement Of South Asia</strong><span>Read</span></a><a class="story-card media-placeholder placeholder-asean" href="./article.html?slug=chasing-shadows-across-borders"><strong>Chasing Shadows Across Borders: India-ASEAN Against Transnational Crimes</strong><span>Read</span></a></div></div>
+        <div class="landing-article-category"><h3>Science &amp; Technology</h3><div class="article-row"><a class="story-card media-placeholder placeholder-ai" href="./article.html?slug=vasudhaiva-kutumbakam-in-age-of-algorithms"><strong>Vasudhaiva Kutumbakam In The Age Of Algorithms: Toward An Indian Philosophy Of AI Governance</strong><span>Read</span></a><a class="story-card media-placeholder placeholder-science" href="./article.html?slug=end-of-history-new-one"><strong>End Of History And The Beginning Of A New One: India’s Role In Reforming Multilateralism</strong><span>Read</span></a></div></div>
+        <div class="landing-article-category"><h3>Society, Culture &amp; Politics</h3><div class="article-row"><a class="story-card media-placeholder placeholder-gilead" href="./article.html?slug=republic-of-gilead"><strong>The Republic Of Gilead: A Dystopia Or Reality?</strong><span>Read</span></a></div></div>
+      </section>
+
+      <section class="archive-section" id="archive" aria-labelledby="archive-title">
+        <p class="section-kicker">Previous Editions</p><h2 id="archive-title">Archive</h2>
+        <p>Browse moments, discussions, and memories from earlier editions of the International Relations Scholastic Conclave.</p>
+        <div class="archive-track" aria-label="Previous IRSC edition gallery">
+          <article class="archive-card"><img src="./assets/images/event.jpg" alt="IRSC archive placeholder" /><span>IRSC 2025</span></article>
+          <article class="archive-card"><img src="./assets/images/editorial.jpg" alt="IRSC archive placeholder" /><span>IRSC 2024</span></article>
+          <article class="archive-card"><img src="./assets/images/explore.jpg" alt="IRSC archive placeholder" /><span>IRSC 2023</span></article>
+          <article class="archive-card"><img src="./assets/images/hero-bg.jpg" alt="IRSC archive placeholder" /><span>IRSC 2022</span></article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-details"><h2 id="contact-title">Get In Touch</h2><div><strong>Email:</strong><a href="mailto:irsc2026@gmail.com">irsc2026@gmail.com</a></div><div><strong>Phone:</strong><a href="tel:+919875304504">+91 9875304504</a></div><div><strong>Address:</strong><address>188, Raja Subodh Chandra Mallick Rd<br />Jadavpur, Kolkata, West Bengal 700032<br />India</address></div><div><strong>Follow us</strong><p class="contact-socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Pinterest">p</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">x</a></p></div></div>
+        <form class="contact-form"><label>Your Name<input type="text" placeholder="Your full name" /></label><label>Email address<input type="email" placeholder="Your email address" /></label><label class="contact-message">Message<textarea placeholder="Write something..."></textarea></label><button type="submit">Send Message</button></form>
+      </section>
+
+      <footer><p>IRSC 2026 · Department of International Relations · Jadavpur University</p><a href="#home">Back to top ↑</a></footer>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
