@@ -174,7 +174,7 @@
   .hero-kicker { font-size: .66rem; margin-bottom: .7rem; }
   .hero h1 { font-size: clamp(5rem, 27vw, 7.8rem); }
   .hero-subtitle { margin-top: .9rem; line-height: 1.15; }
-  .hero-countdown { justify-self: stretch; width: 100%; padding: .95rem; border-radius: 1.35rem; }
+  .hero-countdown { justify-self: center; width: min(100%, 320px); max-width: none; padding: .95rem; border-radius: 1.35rem; }
   .countdown-display { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; }
   .countdown-cell { min-height: 74px; padding: .55rem .3rem; border-radius: .9rem; }
   .countdown-cell strong { font-size: clamp(1.45rem, 7vw, 2rem); }
@@ -914,12 +914,20 @@
   .top-nav.open{display:flex;}
   .top-nav a{padding:.75rem 0;font-size:.8rem;}
   .menu-toggle{display:grid;}
-  .hero{margin:.75rem;padding:2rem 1.2rem 3rem;min-height:480px;border-radius:1.8rem;}
-  .hero-copy{align-items:flex-start;text-align:left;}
-  .hero h1{font-size:clamp(4.5rem,17vw,7rem);} 
-  .hero-subtitle{font-size:.95rem;}
-  .hero-countdown{justify-self:stretch;width:100%;}
-  .hero-university{position:static;margin-top:1.2rem;text-align:left;font-size:.7rem;}
+  .hero{margin:.75rem;padding:1.4rem .95rem 1.55rem;min-height:0;border-radius:1.6rem;justify-items:center;gap:.8rem;}
+  .hero-copy{align-items:center;text-align:center;max-width:none;}
+  .hero-kicker{margin-bottom:.55rem;font-size:.62rem;}
+  .hero h1{font-size:clamp(5.2rem,20vw,7.7rem);line-height:.76;} 
+  .hero-subtitle{margin-top:.75rem;font-size:1rem;line-height:1.08;}
+  .hero .gold-button{padding:.48rem .9rem;font-size:.64rem;}
+  .hero-countdown{justify-self:stretch;width:100%;max-width:285px;padding:.62rem;border-radius:1rem;gap:.45rem;}
+  .countdown-kicker{font-size:.6rem;letter-spacing:.15em;}
+  .countdown-display{grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem;}
+  .countdown-cell{min-height:58px;padding:.35rem .18rem;border-radius:.7rem;}
+  .countdown-cell strong{font-size:clamp(1rem,4.6vw,1.45rem);}
+  .countdown-cell span{margin-top:.15rem;font-size:.38rem;letter-spacing:.06em;}
+  .countdown-dates{font-size:.52rem;}
+  .hero-university{position:static;margin:.25rem 0 0;text-align:center;font-size:.64rem;}
   .hero-seal{display:none;}
   .intro-section,.editorial-section,.events-section,.explore-section,.call-section,.newsletter-section,.subscribe-section,.archive-section,.contact-section,.landing-articles,.articles-hub,.article-placeholder-page{padding-left:1.1rem;padding-right:1.1rem;}
   .about-description,.editorial-copy,.events-section>p,.newsletter-section>p,.call-section p,.archive-section>p{max-width:none;font-size:1rem;line-height:1.35;}
@@ -951,4 +959,27 @@
   .convenor-grid .convenor-name{font-size:.68rem;}
   .contact-form{padding:1.3rem;}
   .contact-form button{width:100%;}
+}
+
+@media (max-width: 760px) {
+  .contact-section{gap:2rem;padding-top:3rem;padding-bottom:3.75rem;}
+  .contact-details{padding:1.6rem 1.2rem;}
+  .contact-details h2{font-size:clamp(2.9rem,13vw,4.4rem);}
+  .contact-form{margin-top:.15rem;padding:1.25rem 1rem 1.2rem;}
+  .contact-form::before{top:-1.15rem;left:6%;font-size:clamp(1.9rem,7vw,2.6rem);}
+}
+
+@media (max-width: 650px) {
+  .hero{padding:1.25rem .9rem 1.4rem;border-radius:1.35rem;}
+  .hero h1{font-size:clamp(5.6rem,23vw,8.1rem);} 
+  .hero-subtitle{font-size:1.02rem;}
+  .hero-countdown{justify-self:center;width:min(100%,265px);max-width:none;padding:.56rem;border-radius:.95rem;}
+  .countdown-display{grid-template-columns:repeat(4,minmax(0,1fr));gap:.28rem;}
+  .countdown-cell{min-height:54px;padding:.3rem .15rem;border-radius:.65rem;}
+  .countdown-cell strong{font-size:clamp(.95rem,4.2vw,1.35rem);} 
+  .countdown-cell span{font-size:.34rem;letter-spacing:.05em;}
+  .countdown-dates{font-size:.48rem;}
+  .contact-section{gap:1.6rem;padding:2.8rem 6% 3.2rem;}
+  .contact-details{padding:1.5rem 1rem;}
+  .contact-form::before{top:-1rem;left:5.5%;font-size:2rem;}
 }
