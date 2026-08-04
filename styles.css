@@ -71,12 +71,12 @@
   justify-self: end;
   display: grid;
   gap: 1rem;
-  width: min(100%, 340px);
-  padding: clamp(1rem, 2vw, 1.35rem);
+  width: min(100%, 390px);
+  padding: clamp(1.15rem, 2.2vw, 1.55rem);
   border: 1px solid rgba(255,255,255,.28);
-  border-radius: 1.8rem;
+  border-radius: 2rem;
   background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
-  box-shadow: 0 20px 40px rgba(0, 18, 36, .22);
+  box-shadow: 0 22px 44px rgba(0, 18, 36, .24);
   backdrop-filter: blur(10px);
 }
 
@@ -89,45 +89,45 @@
 
 .countdown-kicker {
   color: #fff1a0;
-  font: 700 .68rem/1 var(--body);
-  letter-spacing: .18em;
+  font: 700 .76rem/1 var(--body);
+  letter-spacing: .2em;
 }
 
 .countdown-display {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .75rem;
+  gap: .85rem;
 }
 
 .countdown-cell {
   display: grid;
   place-items: center;
-  min-height: 92px;
-  padding: .85rem .6rem .7rem;
+  min-height: 104px;
+  padding: .95rem .7rem .8rem;
   border: 1px solid rgba(255,255,255,.16);
-  border-radius: 1.1rem;
+  border-radius: 1.2rem;
   background: rgba(4, 24, 41, .38);
 }
 
 .countdown-cell strong {
   display: block;
   color: #fff1a0;
-  font: 700 clamp(2rem, 4vw, 3.1rem)/.88 var(--display);
-  letter-spacing: -.06em;
+  font: 700 clamp(2.45rem, 4.6vw, 3.65rem)/.88 var(--display);
+  letter-spacing: -.08em;
 }
 
 .countdown-cell span {
   display: block;
-  margin-top: .35rem;
+  margin-top: .3rem;
   color: #fff;
-  font: 700 .64rem/1 var(--body);
-  letter-spacing: .16em;
+  font: 700 .72rem/1 var(--body);
+  letter-spacing: .18em;
   text-transform: uppercase;
 }
 
 .countdown-dates {
-  font: 600 .88rem/1.2 var(--body);
-  letter-spacing: .04em;
+  font: 700 .98rem/1.2 var(--body);
+  letter-spacing: .05em;
 }
 
 .hero-university {
@@ -147,9 +147,11 @@
 
 .hero-seal {
   position: absolute;
-  right: clamp(1.75rem, 5vw, 6rem);
-  bottom: clamp(.8rem, 2.2vw, 2rem);
-  width: clamp(65px, 8vw, 110px);
+  left: clamp(1.25rem, 3vw, 2.75rem);
+  top: clamp(1.25rem, 3vw, 2.4rem);
+  right: auto;
+  bottom: auto;
+  width: clamp(58px, 6vw, 92px);
   background: transparent;
   box-shadow: none;
 }
@@ -174,21 +176,21 @@
   .hero-kicker { font-size: .66rem; margin-bottom: .7rem; }
   .hero h1 { font-size: clamp(5rem, 27vw, 7.8rem); }
   .hero-subtitle { margin-top: .9rem; line-height: 1.15; }
-  .hero-countdown { justify-self: center; width: min(100%, 320px); max-width: none; padding: .95rem; border-radius: 1.35rem; }
+  .hero-countdown { justify-self: center; width: min(100%, 290px); max-width: none; padding: .7rem; border-radius: 1.1rem; }
   .countdown-display { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; }
-  .countdown-cell { min-height: 74px; padding: .55rem .3rem; border-radius: .9rem; }
-  .countdown-cell strong { font-size: clamp(1.45rem, 7vw, 2rem); }
-  .countdown-cell span { margin-top: .25rem; font-size: .5rem; letter-spacing: .12em; }
-  .countdown-dates { font-size: .72rem; text-align: center; }
+  .countdown-cell { min-height: 58px; padding: .4rem .2rem; border-radius: .75rem; }
+  .countdown-cell strong { font-size: clamp(1rem, 4.6vw, 1.45rem); }
+  .countdown-cell span { margin-top: .16rem; font-size: .38rem; letter-spacing: .06em; }
+  .countdown-dates { font-size: .55rem; text-align: center; }
   .hero-university { position: static; margin: .2rem 0 0; font-size: .65rem; }
-  .hero-seal { display: none; }
+  .hero-seal { display: block; left: .9rem; top: .9rem; width: 58px; }
 }
 
 /* About and theme feature */
 .intro-section {
   padding: clamp(4rem, 7vw, 7.5rem) 7% clamp(2.5rem, 5vw, 4.5rem);
   border: 0;
-  background: linear-gradient(rgba(255,255,255,.87), rgba(255,255,255,.87)), url("./assets/images/paper.jpg") center / cover;
+  background: linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)), url("./assets/images/about_bg.jpg") center / cover;
 }
 
 .about-heading {
@@ -690,16 +692,19 @@
 .subscribe-copy {
   position: relative;
   align-self: center;
-  padding: clamp(2rem, 4vw, 4rem);
-  border: 3px solid #151515;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: clamp(2rem, 4vw, 4rem) 0 clamp(2rem, 4vw, 4rem) clamp(2rem, 4vw, 4rem);
+  border: 0;
 }
 
 .subscribe-copy .section-kicker { display: none; }
-.subscribe-section h2 { margin: 0; color: #005285; font: 500 clamp(3.3rem, 7vw, 7.5rem)/.86 var(--display); letter-spacing: -.08em; }
-.subscribe-section form { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; margin-top: clamp(1.5rem, 3vw, 3rem); }
+.subscribe-section h2 { margin: 0; max-width: 16ch; color: #005285; font: 500 clamp(3.3rem, 7vw, 7.5rem)/.86 var(--display); letter-spacing: -.08em; text-align: right; }
+.subscribe-section form { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .9rem; width: min(100%, 34rem); margin-top: clamp(1.5rem, 3vw, 3rem); margin-left: auto; }
 .mail-icon { color: #151515; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1; }
 .subscribe-section input { min-width: 0; border: 2px solid #151515; padding: clamp(.75rem, 1.5vw, 1.25rem); font: 500 clamp(1rem, 2vw, 1.8rem) var(--body); background: rgba(255,255,255,.92); }
-.subscribe-section button { border: 0; background: #005285; color: #fff5b8; padding: .7rem 1rem; font-size: 1.4rem; }
+.subscribe-section button { border: 2px solid #151515; background: #005285; color: #fff5b8; padding: .8rem 1.3rem; font: 700 clamp(.75rem, 1.2vw, 1rem) var(--body); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
 
 .call-section {
   padding: clamp(4rem, 7vw, 7rem) 6% clamp(4rem, 7vw, 7rem);
@@ -794,7 +799,10 @@
 
 @media (max-width: 650px) {
   .subscribe-section { min-height: 0; aspect-ratio: 833 / 469; }
-  .subscribe-copy { top: 51.8%; left: 53.5%; width: 32.5%; padding: 0; }
+  .subscribe-copy { top: 51.8%; left: 53.5%; width: 32.5%; padding: 0; align-items: flex-end; }
+  .subscribe-section h2 { text-align: right; }
+  .subscribe-section form { width: 100%; }
+  .subscribe-section button { padding: .45rem .6rem; font-size: .42rem; }
   .subscribe-section input { height: 1.25rem; padding: 0 .25rem; font-size: .5rem; }
 }
 
@@ -848,9 +856,9 @@
 
 @media (max-width: 650px) {
   .subscribe-section { aspect-ratio: 1107 / 621; }
-  .subscribe-copy { top: 7%; left: 7%; width: 86%; height: 82%; padding: .8rem; border-width: 2px; }
-  .subscribe-section h2 { padding-left: 20%; font-size: clamp(2rem, 9vw, 3.4rem); }
-  .subscribe-section form { width: 55%; gap: .4rem; margin-top: .8rem; }
+  .subscribe-copy { top: 7%; left: 7%; width: 86%; height: 82%; padding: .8rem; border-width: 0; align-items: flex-end; }
+  .subscribe-section h2 { padding-left: 0; font-size: clamp(2rem, 9vw, 3.4rem); text-align: right; }
+  .subscribe-section form { width: 65%; gap: .4rem; margin-top: .8rem; }
   .subscribe-section .mail-icon { font-size: 1.4rem; }
   .subscribe-section input { padding: .35rem .45rem; font-size: .56rem; border-width: 1px; }
 }
