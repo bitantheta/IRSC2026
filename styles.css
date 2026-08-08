@@ -808,17 +808,17 @@
 
 /* Live subscribe panel over the Greek artwork */
 .subscribe-section {
-  aspect-ratio: 1107 / 621;
-  background: url("./assets/images/greek_withoutbg.png") center / cover no-repeat;
+  aspect-ratio: 1107 / 540;
+  background: url("./assets/images/greek_withoutbg.png") center bottom / cover no-repeat;
 }
 
 .subscribe-copy {
-  top: 10%;
-  left: 11%;
-  width: 76%;
-  height: 75%;
-  padding: clamp(1.2rem, 3vw, 3rem) clamp(1.5rem, 4vw, 4rem);
-  border: 3px solid #151515;
+  top: 11%;
+  left: 54%;
+  width: 38%;
+  height: auto;
+  padding: 0;
+  border: 0;
 }
 
 .subscribe-section h2 {
@@ -856,7 +856,7 @@
 
 @media (max-width: 650px) {
   .subscribe-section { aspect-ratio: 1107 / 621; }
-  .subscribe-copy { top: 7%; left: 7%; width: 86%; height: 82%; padding: .8rem; border-width: 0; align-items: flex-end; }
+  .subscribe-copy { top: 10%; left: 49%; width: 44%; height: auto; padding: 0; border: 0; align-items: flex-end; }
   .subscribe-section h2 { padding-left: 0; font-size: clamp(2rem, 9vw, 3.4rem); text-align: right; }
   .subscribe-section form { width: 65%; gap: .4rem; margin-top: .8rem; }
   .subscribe-section .mail-icon { font-size: 1.4rem; }
@@ -990,4 +990,65 @@
   .contact-section{gap:1.6rem;padding:2.8rem 6% 3.2rem;}
   .contact-details{padding:1.5rem 1rem;}
   .contact-form::before{top:-1rem;left:5.5%;font-size:2rem;}
+}
+
+/* Compact subscription layout */
+.subscribe-section form {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  width: 100%;
+}
+
+.subscribe-section button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .subscribe-section {
+    display: block;
+    min-height: 0;
+    aspect-ratio: 1107 / 621;
+    padding: 0;
+    background: url("./assets/images/greek_withoutbg.png") center / cover no-repeat;
+  }
+
+  .subscribe-copy {
+    position: absolute;
+    top: 11%;
+    left: 44%;
+    width: 50%;
+    height: auto;
+    padding: 0;
+    border: 0;
+  }
+
+  .subscribe-section h2 {
+    max-width: none;
+    padding: 0;
+    font-size: clamp(1.55rem, 6.5vw, 2.7rem);
+    text-align: right;
+  }
+
+  .subscribe-section form {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: .35rem;
+    margin-top: .7rem;
+  }
+
+  .subscribe-section .mail-icon { font-size: 1.2rem; }
+
+  .subscribe-section input {
+    height: 2.15rem;
+    padding: .35rem .45rem;
+    border-width: 1px;
+    font-size: .75rem;
+  }
+
+  .subscribe-section button {
+    height: 2.15rem;
+    padding: .35rem .55rem;
+    border-width: 1px;
+    font-size: .55rem;
+  }
 }
