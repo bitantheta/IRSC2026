@@ -84,6 +84,43 @@ if (convenorDialog && convenorDialogTitle && convenorDialogContent) {
   });
 }
 
+const contactForm = document.querySelector(".contact-form");
+const contactFormStatus = document.querySelector(".contact-form-status");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    const subject = "IRSC 2026 website enquiry";
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    if (contactFormStatus) {
+      contactFormStatus.textContent = "Opening your email app...";
+    }
+
+    window.location.href = `mailto:irsc2026@jadavpuruniversity.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
+const archiveTrack = document.querySelector(".archive-track");
+
+if (archiveTrack && !archiveTrack.dataset.duplicated) {
+  const archiveSlides = [...archiveTrack.children];
+
+  archiveSlides.forEach((slide) => {
+    const duplicate = slide.cloneNode(true);
+    duplicate.setAttribute("aria-hidden", "true");
+    duplicate.querySelector("img")?.setAttribute("alt", "");
+    archiveTrack.append(duplicate);
+  });
+
+  archiveTrack.dataset.duplicated = "true";
+}
+
 const countdownTarget = new Date("2026-09-08T18:30:00Z");
 const countdownDays = document.getElementById("countdown-days");
 const countdownHours = document.getElementById("countdown-hours");
