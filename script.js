@@ -119,6 +119,18 @@ if (archiveTrack && !archiveTrack.dataset.duplicated) {
   });
 
   archiveTrack.dataset.duplicated = "true";
+
+  const updateArchiveLoopWidth = () => {
+    const firstSlide = archiveTrack.children[0];
+    const firstDuplicate = archiveTrack.children[archiveSlides.length];
+
+    if (firstSlide && firstDuplicate) {
+      archiveTrack.style.setProperty("--archive-loop-width", `${firstDuplicate.offsetLeft - firstSlide.offsetLeft}px`);
+    }
+  };
+
+  updateArchiveLoopWidth();
+  window.addEventListener("resize", updateArchiveLoopWidth);
 }
 
 const countdownTarget = new Date("2026-09-08T18:30:00Z");

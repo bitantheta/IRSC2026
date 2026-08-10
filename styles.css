@@ -980,9 +980,10 @@
   width: max-content;
   gap: clamp(1rem, 2vw, 2rem);
   padding: 0;
-  animation: archive-scroll 70s linear infinite;
   will-change: transform;
 }
+
+.archive-track[data-duplicated="true"] { animation: archive-scroll 120s linear infinite; }
 
 .archive-card {
   flex: 0 0 clamp(240px, 28vw, 410px);
@@ -998,7 +999,7 @@
 .archive-carousel:focus-within .archive-track { animation-play-state: paused; }
 
 @keyframes archive-scroll {
-  to { transform: translateX(calc(-50% - clamp(.5rem, 1vw, 1rem))); }
+  to { transform: translateX(calc(-1 * var(--archive-loop-width))); }
 }
 
 @media (max-width: 760px) {
