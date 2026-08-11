@@ -69,6 +69,7 @@ const coverElement = document.getElementById("article-cover");
 const bodyElement = document.getElementById("article-body");
 
 function isSubheading(paragraph) {
+  if (paragraph.startsWith("## ")) return true;
   const letters = paragraph.replace(/[^A-Za-z]/g, "");
   return letters.length > 5 && paragraph.length < 100 && letters === letters.toUpperCase();
 }
@@ -83,7 +84,7 @@ function renderArticle(text) {
 
   bodyElement.replaceChildren(...paragraphs.map((paragraph) => {
     const element = document.createElement(isSubheading(paragraph) ? "h2" : "p");
-    element.textContent = paragraph;
+    element.textContent = paragraph.replace(/^##\s+/, "");
     return element;
   }));
 }
