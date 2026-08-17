@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koutuhal | IRSC 2026</title>
+    <meta name="description" content="Koutuhal, the quiz event of IRSC 2026." />
+    <link rel="icon" type="image/webp" href="./assets/images/logo-with-bg.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="koutuhal-page">
+    <header class="masthead koutuhal-masthead">
+      <a class="masthead-mark" href="./index.html" aria-label="IRSC home">IRSC<span>2026</span></a>
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="top-nav" aria-label="Primary navigation"><a href="./index.html">Home</a><a href="./koutuhal.html" aria-current="page">Koutuhal</a><a href="./articles.html">Articles</a><a href="./index.html#contact">Contact Us</a></nav>
+    </header>
+
+    <main>
+      <section class="koutuhal-landing" aria-labelledby="koutuhal-title">
+        <div class="koutuhal-orb koutuhal-orb-one"></div><div class="koutuhal-orb koutuhal-orb-two"></div>
+        <div class="koutuhal-intro">
+          <p class="koutuhal-kicker">IRSC 2026 presents</p>
+          <img class="koutuhal-logo" src="./assets/images/koutuhal/koutuhal-logo.png" alt="Koutuhal" />
+          <h1 id="koutuhal-title" class="sr-only">Koutuhal</h1>
+          <div class="koutuhal-copy">
+            <p>Curiosity is the beginning of every good question.</p>
+            <p class="koutuhal-details">Event details will be announced here soon.</p>
+          </div>
+          <a class="koutuhal-entry" href="./city-prelims.html"><span>Enter the quiz</span><strong>City Prelims</strong><i aria-hidden="true">→</i></a>
+        </div>
+        <p class="koutuhal-credit">Department of International Relations · Jadavpur University</p>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

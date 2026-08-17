@@ -1,0 +1,41 @@
+const cityPrelimsForm = document.getElementById("city-prelims-form");
+const quizStatus = document.getElementById("quiz-status");
+
+if (cityPrelimsForm) {
+  cityPrelimsForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!cityPrelimsForm.checkValidity()) {
+      cityPrelimsForm.reportValidity();
+      quizStatus.textContent = "Please complete every required field before submitting.";
+      return;
+    }
+
+    const endpoint = cityPrelimsForm.dataset.submissionEndpoint;
+    if (!endpoint) {
+      quizStatus.textContent = "Submissions are not open yet. Please check with the organisers before submitting.";
+      return;
+    }
+
+    const button = cityPrelimsForm.querySelector("button[type='submit']");
+    const payload = Object.fromEntries(new FormData(cityPrelimsForm).entries());
+    payload.submitted_at = new Date().toISOString();
+    button.disabled = true;
+    quizStatus.textContent = "Submitting your responses…";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      cityPrelimsForm.reset();
+      quizStatus.textContent = "Your responses have been submitted successfully.";
+    } catch (error) {
+      quizStatus.textContent = "We could not submit your responses. Please check your connection and try again.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+}

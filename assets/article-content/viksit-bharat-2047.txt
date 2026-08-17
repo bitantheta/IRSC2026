@@ -11,16 +11,20 @@ Now the question is: what constitutes a “developed” nation, and how should d
 
 With a population of 200 million Indian Muslims constitute the country's largest minority community. Since India's independence, Muslims have often faced discrimination, prejudice, and violence, despite constitutional protection. After decades of agitation about the Muslim condition, the central government in 2006 established the Rajender Sachar Committee to prepare a report on the social, economic and educational status of the Muslim community in India. The report identified several development gaps and emphasized that inclusive development, equal opportunity, and better access to public institutions are essential for Socio-economic advancement of Muslims. The key findings of the Sachar Committee are as follows:
 
-Educational Disadvantage and the Drop-out Crisis
+## Educational Disadvantage and the Drop-out Crisis
+
 Muslims literacy rate, higher education enrolment, and professional education participation remain below than national average in many regions. Educational disadvantage often limits employment opportunities and restricts social mobility. While a widespread stereotype suggests that Muslim households overwhelmingly prefer religious education, empirical data shows that only 3% to 4%  Muslim children actually attend madarsas. The vast majority are enrolled in affordable government schools. The major reasons for low literacy among Indian Muslims are poverty and the unavailability of schools near households.
 
-Economic Informality and Administrative Under-representation
+## Economic Informality and Administrative Under-representation
+
 Economic challenges continue to affect many Muslim households. A considerable proportion of the community depends on self-employment, small family businesses, traditional crafts, and the informal sector, where incomes are highly unstable and access to social security is severely limited. Conversely, participation in quality, salaried employment within the organized public and private sectors is exceptionally low. This is reflected in premier civil services and security agencies (such as the IAS, IFS,or IPS), where the community’s representation is around 3% to 6%, significantly curtailing their direct participation in administration. 
 
-Financial Exclusion and Systemic Credit Barriers
+## Financial Exclusion and Systemic Credit Barriers
+
 Financial inclusion is another critical concern that undermines wealth creation. The Sachar Committee observed that access to institutional bank credit and mainstream financial services remains severely restricted in several minority-concentrated regions. A major bottleneck is the practice where certain commercial banks unofficially categorize Muslim-dominated localities as 'negative geographical zones' or 'red zones,' making it exceedingly difficult for local micro-entrepreneurs and artisans to secure formal loans for business expansion or startups.
 
-Public Infrastructure and Spatial Marginalization
+## Public Infrastructure and Spatial Marginalization
+
 The persistent development deficit is tightly linked to inadequate physical infrastructure in areas with significant Muslim populations. Pervasive shortages of high-quality government schools, healthcare clinics, proper roads, clean sanitation, and drinking water facilities severely depress local human development outcomes.
 
 The findings of the Committee challenged the prevailing political narrative about the condition of Muslims and asserted that on most socio-economic indicators they were on the margins of structures of political,  economic, and social relevance and their average condition was comparable to or even worse than the country's historically most acknowledged backward communities,  namely the Scheduled Caste and Scheduled Tribes. The view has been expressed that Indian Muslims are “in danger of becoming second class citizens”. 
@@ -44,6 +48,4 @@ Seeking equity in a majoritarian society https://frontline.thehindu.com/social-i
 https://www.cfr.org/backgrounders/india-muslims-marginalized-population-bjp-modi#chapter-what-types-of-discrimination-do-indias-muslims-face
 
 Instant Scholar: Development as freedom - an India perspective by Amartya Sen - Times of India https://share.google/rW0A2fIPZ78qbhkFh
-
-
 
