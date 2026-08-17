@@ -19,10 +19,15 @@
     </header>
 
     <main class="quiz-shell">
+      <header class="quiz-paper-header" aria-label="City Prelims event information">
+        <p>Triguna Sen Auditorium,<br />Jadavpur University</p>
+        <img class="quiz-koutuhal-logo" src="./assets/images/koutuhal/koutuhal-logo.png" alt="Koutuhal" />
+        <p>10th September</p>
+      </header>
       <section class="quiz-heading" aria-labelledby="quiz-title">
-        <a class="quiz-back" href="./koutuhal.html">← Koutuhal</a>
-        <div><p class="quiz-kicker">Koutuhal · IRSC 2026</p><h1 id="quiz-title">City Prelims</h1></div>
-        <p class="quiz-instructions">One team. Two participants. Twelve questions.<br />Write your answers carefully before submitting.</p>
+        <a class="quiz-back-arrow" href="./koutuhal.html" aria-label="Back to Koutuhal">←</a>
+        <div><h1 id="quiz-title">City Prelims</h1></div>
+        <div class="quiz-instructions"><h2>Instructions</h2><ol type="i"><li>Teams of two are eligible for participating.</li><li>A total of 12 questions.</li><li>Star-marked (***) questions carry extra weightage.</li><li>No negative marking.</li><li>In case of a tie, star-marked questions and precision of answers will be taken into account.</li><li>Top two teams shall qualify directly for the Semi-Finals.</li></ol></div>
       </section>
 
       <!-- Set data-submission-endpoint to the organisers' Apps Script URL before publishing. -->
@@ -38,7 +43,7 @@
 
         <section class="quiz-panel questions-panel" aria-labelledby="questions-title">
           <div class="quiz-section-heading"><p>Answer sheet</p><h2 id="questions-title">Questions</h2></div>
-          <p class="panel-note">Type one answer for each question. Your responses are saved only when you submit the form.</p>
+          <p class="panel-note">Read the questions carefully and answer precisely.</p>
           <ol class="quiz-questions">
             <li><p>The dispute grew into a wider war involving states whose interests extended well beyond the immediate theatre. Much of the fighting took place across mountainous terrain, before an agreement eventually froze the battlefield without settling the political question beneath it. The division endured, while the conflict itself never acquired a definitive legal conclusion. One of the principal participants declined to formally endorse the agreement that brought the fighting to an end. What conflict is being talked about here?</p><label for="answer-1">Your answer<textarea id="answer-1" name="answer_1" required></textarea></label></li>
             <li><p>A newly seated Asian delegation once brought a grievance to the fledgling United Nations concerning how a fellow member state treated a minority tied to the delegation's own country. The accused government's foreign minister — a former general who had helped draft the organisation's charter only three years before — invoked the very provision meant to protect states from outside interference in their internal affairs. He lost the vote. Legal historians now regard this moment as establishing a specific institutional “first” for the Assembly. What “first” is this episode credited with?</p><label for="answer-2">Your answer<textarea id="answer-2" name="answer_2" required></textarea></label></li>
@@ -57,6 +62,7 @@
 
         <section class="quiz-submit" aria-label="Submit quiz"><label class="consent"><input type="checkbox" name="consent" required /> <span>I confirm that the information and responses entered above are correct.</span></label><button class="quiz-submit-button" type="submit">Submit responses <span>→</span></button><p class="quiz-status" id="quiz-status" aria-live="polite"></p></section>
       </form>
+      <footer class="quiz-paper-footer"><p>Triguna Sen Auditorium,<br />Jadavpur University</p><img class="quiz-koutuhal-logo" src="./assets/images/koutuhal/koutuhal-logo.png" alt="Koutuhal" /><p>10th September</p></footer>
     </main>
     <script src="./script.js"></script><script src="./city-prelims.js"></script>
   </body>
