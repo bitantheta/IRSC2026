@@ -2,6 +2,10 @@ const cityPrelimsForm = document.getElementById("city-prelims-form");
 const quizStatus = document.getElementById("quiz-status");
 
 if (cityPrelimsForm) {
+  cityPrelimsForm.querySelectorAll(".quiz-questions textarea, input[name='consent']").forEach((field) => {
+    field.removeAttribute("required");
+  });
+
   cityPrelimsForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -31,7 +35,7 @@ if (cityPrelimsForm) {
       });
       if (!response.ok) throw new Error("Submission failed");
       cityPrelimsForm.reset();
-      quizStatus.textContent = "Your responses have been submitted successfully.";
+      window.location.assign("./koutuhal.html");
     } catch (error) {
       quizStatus.textContent = "We could not submit your responses. Please check your connection and try again.";
     } finally {
