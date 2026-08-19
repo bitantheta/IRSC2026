@@ -35,7 +35,7 @@ if (cityPrelimsForm) {
       });
       if (!response.ok) throw new Error("Submission failed");
       cityPrelimsForm.reset();
-      window.location.assign("./koutuhal.html");
+      window.location.assign("./qoutuhol.html");
     } catch (error) {
       quizStatus.textContent = "We could not submit your responses. Please check your connection and try again.";
     } finally {
