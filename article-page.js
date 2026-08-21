@@ -19,7 +19,7 @@ const articles = {
   },
   "viksit-bharat-2047": {
     title: "Viksit Bharat 2047 and the Inclusion of Indian Muslims in the Development Process: Assessing Socio-Economic Challenges and Prospects",
-    byline: "IRSC Editorial",
+    byline: "Rayhana Hossain",
     cover: "vikshit bharat.webp",
     file: "viksit-bharat-2047.txt"
   },
