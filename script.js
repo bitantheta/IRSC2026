@@ -106,6 +106,16 @@ if (contactForm) {
   });
 }
 
+const backToTop = document.getElementById("back-to-top");
+
+if (backToTop) {
+  backToTop.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  });
+}
+
 const archiveTrack = document.querySelector(".archive-track");
 
 if (archiveTrack && !archiveTrack.dataset.duplicated) {

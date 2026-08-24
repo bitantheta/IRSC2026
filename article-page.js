@@ -67,6 +67,9 @@ const titleElement = document.getElementById("article-title");
 const bylineElement = document.getElementById("article-byline");
 const coverElement = document.getElementById("article-cover");
 const bodyElement = document.getElementById("article-body");
+const suggestedArticlesElement = document.getElementById("suggested-articles");
+const suggestionsPrevious = document.getElementById("suggestions-previous");
+const suggestionsNext = document.getElementById("suggestions-next");
 
 function isSubheading(paragraph) {
   if (paragraph.startsWith("## ")) return true;
@@ -89,6 +92,39 @@ function renderArticle(text) {
   }));
 }
 
+function renderSuggestedArticles() {
+  if (!suggestedArticlesElement) return;
+
+  Object.entries(articles)
+    .filter(([slug]) => slug !== articleSlug)
+    .forEach(([slug, suggestedArticle]) => {
+      const link = document.createElement("a");
+      const image = document.createElement("img");
+      const copy = document.createElement("span");
+      const title = document.createElement("strong");
+      const byline = document.createElement("small");
+
+      link.className = "suggested-article-card";
+      link.href = `./article.html?slug=${encodeURIComponent(slug)}`;
+      image.src = `./assets/images/${suggestedArticle.cover}`;
+      image.alt = "";
+      image.loading = "lazy";
+      title.textContent = suggestedArticle.title;
+      byline.textContent = suggestedArticle.byline;
+      copy.append(title, byline);
+      link.append(image, copy);
+      suggestedArticlesElement.append(link);
+    });
+}
+
+function scrollSuggestions(direction) {
+  if (!suggestedArticlesElement) return;
+  suggestedArticlesElement.scrollBy({
+    left: direction * Math.max(suggestedArticlesElement.clientWidth * .82, 300),
+    behavior: "smooth"
+  });
+}
+
 if (!article) {
   titleElement.textContent = "Article not found";
   bodyElement.textContent = "Return to the Articles page to choose a published IRSC article.";
@@ -98,6 +134,9 @@ if (!article) {
   coverElement.src = `./assets/images/${article.cover}`;
   coverElement.alt = `Cover image for ${article.title}`;
   document.title = `${article.title} | IRSC 2026`;
+  renderSuggestedArticles();
+  suggestionsPrevious?.addEventListener("click", () => scrollSuggestions(-1));
+  suggestionsNext?.addEventListener("click", () => scrollSuggestions(1));
 
   fetch(`./assets/article-content/${article.file}`)
     .then((response) => {
