@@ -58,6 +58,33 @@ const articles = {
     byline: "Madhuwrita Nandi · UG II",
     cover: "republic_of_gilead.webp",
     file: "republic-of-gilead.txt"
+  },
+  "they-climbed-in-ranks-while-the-satluj-ran-red": {
+    title: "They Climbed in Ranks While the Satluj Ran Red",
+    byline: "Aditya Chourasiya · UG – III",
+    cover: "they-climbed-in-ranks-while-the-satluj-ran-red.jpeg",
+    file: "they-climbed-in-ranks-while-the-satluj-ran-red.txt"
+  },
+  "eggs-ideology-and-politics-of-the-plate": {
+    title: "Eggs, Ideology and the Politics of the Plate: Mid-Day Meals, ISKCON and Dietary Autonomy in Bengal",
+    byline: "Md Manjur Alam Mandal",
+    cover: "eggs-ideology-and-politics-of-the-plate.jpg",
+    file: "eggs-ideology-and-politics-of-the-plate.html",
+    format: "html"
+  },
+  "fluidity-of-power-indias-hydro-diplomacy": {
+    title: "Fluidity of Power: India’s Hydro-Diplomacy and Quest for Strategic Autonomy",
+    byline: "Manisha Ghosh · UG – III",
+    cover: "fluidity-of-power-indias-hydro-diplomacy.jpg",
+    file: "fluidity-of-power-indias-hydro-diplomacy.html",
+    format: "html"
+  },
+  "bankipur-by-poll-what-prashant-kishors-upset-means-for-bihar-politics": {
+    title: "Bankipur By-poll: What Prashant Kishor’s Upset Means for Bihar Politics",
+    byline: "Asmita Bhattasali · UG4",
+    cover: "bankipur-by-poll-what-prashant-kishors-upset-means-for-bihar-politics.jpg",
+    file: "bankipur-by-poll-what-prashant-kishors-upset-means-for-bihar-politics.html",
+    format: "html"
   }
 };
 
@@ -78,6 +105,11 @@ function isSubheading(paragraph) {
 }
 
 function renderArticle(text) {
+  if (article.format === "html") {
+    bodyElement.innerHTML = text;
+    return;
+  }
+
   const paragraphs = text
     .replace(/\r/g, "")
     .split(/\n\s*\n/)
@@ -86,7 +118,7 @@ function renderArticle(text) {
     .filter((paragraph) => paragraph.toLowerCase() !== article.title.toLowerCase());
 
   bodyElement.replaceChildren(...paragraphs.map((paragraph) => {
-    const element = document.createElement(isSubheading(paragraph) ? "h2" : "p");
+    const element = document.createElement(paragraph.startsWith("“") ? "blockquote" : isSubheading(paragraph) ? "h2" : "p");
     element.textContent = paragraph.replace(/^##\s+/, "");
     return element;
   }));

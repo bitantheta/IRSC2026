@@ -118,6 +118,17 @@ if (backToTop) {
 
 const archiveTrack = document.querySelector(".archive-track");
 
+document.querySelectorAll("[data-carousel-target]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const carousel = document.getElementById(button.dataset.carouselTarget);
+    if (!carousel) return;
+    carousel.scrollBy({
+      left: Number(button.dataset.carouselDirection) * carousel.clientWidth * .85,
+      behavior: "smooth"
+    });
+  });
+});
+
 if (archiveTrack && !archiveTrack.dataset.duplicated) {
   const archiveSlides = [...archiveTrack.children];
 
