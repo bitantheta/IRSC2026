@@ -1,4 +1,28 @@
 const articles = {
+  "malacca-strait-at-crossroads": {
+    title: "The Malacca Strait at Crossroads: Infrastructure Innovation, Regional Cooperation and Adaptive Governance in an Era of Change",
+    byline: "Aakansha Sengupta",
+    cover: "aakansha-article.jpg",
+    file: "malacca-strait-at-crossroads.txt"
+  },
+  "intersection-environment-gender-governance": {
+    title: "Intersection of Environment and Gender in Governance: Eco-Feminist Dimensions in Indian Policy Making",
+    byline: "Sananda Roy · UG III",
+    cover: "sananda-article.jpg",
+    file: "intersection-environment-gender-governance.txt"
+  },
+  "price-of-paradise-north-bengal-hills": {
+    title: "The Price of Paradise: North Bengal's Hills at a Crossroads",
+    byline: "Nidhi Subba · UG IV",
+    cover: "nidhi-article.jpg",
+    file: "price-of-paradise-north-bengal-hills.txt"
+  },
+  "politics-of-entertainment": {
+    title: "Politics of Entertainment, Entertainment of Politics: A Brief Analysis of Bollywood and Soft Diplomacy Through ‘Bulbbul’",
+    byline: "Manali Moulik · UG III",
+    cover: "manali-article.jpg",
+    file: "politics-of-entertainment.txt"
+  },
   "football-beyond-the-pitch": {
     title: "Football Beyond the Pitch: A Language of Resistance Against Exploitation and Oppression",
     byline: "Mayukh Ghosh · UG IV",
