@@ -47,12 +47,6 @@ const articles = {
     cover: "vikshit bharat.webp",
     file: "viksit-bharat-2047.txt"
   },
-  "trivia-of-teesta": {
-    title: "The Trivia of Teesta and the Triumvirate of Bangladesh-India-and-China: Bangladesh on a Tightrope, Juxtaposing Regional Rivalries, and Domestic Voices",
-    byline: "Bhumit Kumar Sancheti · Jadavpur University, Sociology · UG III",
-    cover: "the_trivia_of_teesta.webp",
-    file: "trivia-of-teesta.txt"
-  },
   "neighbourhood-first-mirage": {
     title: "The Neighbourhood First Mirage: Beijing's Encirclement of South Asia",
     byline: "Debadrito Sarkar · UG III",
