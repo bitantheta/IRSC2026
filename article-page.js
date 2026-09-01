@@ -1,4 +1,32 @@
 const articles = {
+  "trumps-war-on-birthright-citizenship": {
+    title: "Is Trump’s War on Birthright Citizenship a Constitutional Game of Whack-a-Mole?",
+    byline: "Sampurna Samantha",
+    cover: "sampurna-trump.jpeg",
+    file: "trumps-war-on-birthright-citizenship.html",
+    format: "html"
+  },
+  "one-is-not-born-but-becomes-a-prostitute": {
+    title: "One Is Not Born, but Becomes a Prostitute: Family, State and Sex Worker",
+    byline: "Jayasmita Sarkar",
+    cover: "jayasmita-prostitute.jpeg",
+    file: "one-is-not-born-but-becomes-a-prostitute.html",
+    format: "html"
+  },
+  "phaki-diya-pothaili-assam": {
+    title: "“Phaki Diya Pothaili Assam”: Cultural Memory and the Ethics of Folk Preservation",
+    byline: "Rupkatha Chakravartty",
+    cover: "rupkatha-assam.jpeg",
+    file: "phaki-diya-pothaili-assam.html",
+    format: "html"
+  },
+  "politics-of-homeland-main-vaapas-aaunga": {
+    title: "The Politics of Homeland: Main Vaapas Aaunga and the Gendered Right to Return",
+    byline: "Adrija Bhattacharjee · UG III, IR",
+    cover: "adrija-main-vaapas-aaunga.jpeg",
+    file: "politics-of-homeland-main-vaapas-aaunga.html",
+    format: "html"
+  },
   "malacca-strait-at-crossroads": {
     title: "The Malacca Strait at Crossroads: Infrastructure Innovation, Regional Cooperation and Adaptive Governance in an Era of Change",
     byline: "Aakansha Sengupta",
@@ -125,6 +153,16 @@ function isSubheading(paragraph) {
 function renderArticle(text) {
   if (article.format === "html") {
     bodyElement.innerHTML = text;
+    bodyElement.querySelectorAll(".article-references li").forEach((item) => {
+      const url = item.textContent.trim();
+      if (!/^https?:\/\//i.test(url)) return;
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = url;
+      item.replaceChildren(link);
+    });
     return;
   }
 

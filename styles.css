@@ -1085,6 +1085,15 @@
 .placeholder-sananda { background-image:url("./assets/images/sananda-article.jpg"); }
 .placeholder-nidhi { background-image:url("./assets/images/nidhi-article.jpg"); }
 .placeholder-manali { background-image:url("./assets/images/manali-article.jpg"); }
+.placeholder-trump { background-image:url("./assets/images/sampurna-trump.jpeg"); background-position:center 28%; }
+.placeholder-prostitute { background-image:url("./assets/images/jayasmita-prostitute.jpeg"); background-position:center; }
+.placeholder-assam { background-image:url("./assets/images/rupkatha-assam.jpeg"); background-position:center; }
+.placeholder-main-vaapas-aaunga { background-image:url("./assets/images/adrija-main-vaapas-aaunga.jpeg"); background-position:center; }
+
+.article-body blockquote footer { display:block; margin:.8rem 0 0; padding:0; color:#287bac; background:transparent; font:700 .8rem/1.35 var(--body); letter-spacing:.04em; text-transform:none; }
+.article-body .article-references { margin:0 0 1.5rem; padding-left:1.35rem; color:#173f58; font-size:.94em; }
+.article-body .article-references li { margin:.65rem 0; padding-left:.25rem; overflow-wrap:anywhere; }
+.article-body .article-references a { color:#07527d; text-decoration-thickness:1px; text-underline-offset:.15em; }
 
 /* Article rows: consistent wide cards with a modern horizontal scroll rail. */
 .editors-pick-grid,.article-grid,.article-row { display:grid; grid-auto-flow:column; align-items:stretch; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x mandatory; scrollbar-width:thin; scrollbar-color:#07527d rgba(7,82,125,.14); }
