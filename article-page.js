@@ -97,7 +97,8 @@ const articles = {
     title: "End of History and the Beginning of a New One: India’s Role in Reforming Multilateralism",
     byline: "Madhuwrita Nandy · UG III",
     cover: "science_technology.png",
-    file: "end-of-history-new-one.txt"
+    file: "end-of-history-new-one.html",
+    format: "html"
   },
   "republic-of-gilead": {
     title: "The Republic of Gilead: A Dystopia or Reality?",
