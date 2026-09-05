@@ -2,12 +2,24 @@ const cityPrelimsForm = document.getElementById("city-prelims-form");
 const quizStatus = document.getElementById("quiz-status");
 
 if (cityPrelimsForm) {
+  if (cityPrelimsForm.dataset.submissionsClosed === "true") {
+    cityPrelimsForm.querySelectorAll("input, textarea, button").forEach((field) => {
+      field.disabled = true;
+    });
+    if (quizStatus) quizStatus.textContent = "Responses are no longer being accepted.";
+  }
+
   cityPrelimsForm.querySelectorAll(".quiz-questions textarea, input[name='consent']").forEach((field) => {
     field.removeAttribute("required");
   });
 
   cityPrelimsForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (cityPrelimsForm.dataset.submissionsClosed === "true") {
+      quizStatus.textContent = "Responses are no longer being accepted.";
+      return;
+    }
 
     if (!cityPrelimsForm.checkValidity()) {
       cityPrelimsForm.reportValidity();

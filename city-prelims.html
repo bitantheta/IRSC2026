@@ -30,8 +30,9 @@
         <div class="quiz-instructions"><h2>Instructions</h2><ol type="i"><li>Teams of two are eligible for participating.</li><li>A total of 12 questions.</li><li>Star-marked (***) questions carry extra weightage.</li><li>No negative marking.</li><li>In case of a tie, star-marked questions and precision of answers will be taken into account.</li><li>Top two teams shall qualify directly for the Semi-Finals.</li></ol></div>
       </section>
 
-      <!-- Set data-submission-endpoint to the organisers' Apps Script URL before publishing. -->
-      <form class="quiz-form" id="city-prelims-form" data-submission-endpoint="https://script.google.com/macros/s/AKfycbwqj0thcCJI5shWTYDyTd5hVk8ttVh1u8YyEpHHzCVwfKOik9MKxCKZRzmOIG3UZ3TX/exec" novalidate>
+      <form class="quiz-form" id="city-prelims-form" data-submissions-closed="true" novalidate>
+        <p class="quiz-closed-notice" role="status"><strong>City Prelims responses are now closed.</strong> Thank you to everyone who participated.</p>
+        <fieldset class="quiz-closed-fields" disabled>
         <section class="quiz-panel team-panel" aria-labelledby="team-details-title">
           <div class="quiz-section-heading"><p>Participant registration</p><h2 id="team-details-title">Team details</h2></div>
           <p class="panel-note">Fields marked <b>*</b> are required.</p>
@@ -60,7 +61,8 @@
           </ol>
         </section>
 
-        <section class="quiz-submit" aria-label="Submit quiz"><label class="consent"><input type="checkbox" name="consent" required /> <span>I confirm that the information and responses entered above are correct.</span></label><button class="quiz-submit-button" type="submit">Submit responses <span>→</span></button><p class="quiz-status" id="quiz-status" aria-live="polite"></p></section>
+        <section class="quiz-submit" aria-label="City Prelims responses closed"><label class="consent"><input type="checkbox" name="consent" required /> <span>I confirm that the information and responses entered above are correct.</span></label><button class="quiz-submit-button" type="submit" disabled>Responses closed</button><p class="quiz-status" id="quiz-status" aria-live="polite">Responses are no longer being accepted.</p></section>
+        </fieldset>
       </form>
       <footer class="quiz-paper-footer"><p>Triguna Sen Auditorium,<br />Jadavpur University</p><img class="quiz-koutuhal-logo" src="./assets/images/koutuhal/koutuhal-logo.png" alt="Qoutūhol" /><p>10th September</p></footer>
     </main>
